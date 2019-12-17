@@ -24,10 +24,10 @@ class App extends Component {
   }
   getGreenVehicles() {
     axios.get(this.state.baseUrl + '?color=green')
-      .then(res => this.setState({ vehicles: res.data.vehicles }))
+      .then(res => this.setState({ vehicles: res.data }))
   }
   getFords() {
-    axios.get(this.state.baseUrl + '?make=tesla')
+    axios.get(this.state.baseUrl + '?make=ford')
       .then(res => this.setState({ vehicles: res.data }))
   }
 
